@@ -40,6 +40,9 @@ json_unicode = (json.dumps if sys.version_info[0] >= 3
 
 class UltraJSONTests(TestCase):
 
+    def test_TestingTravis(self):
+        pass
+
     def test_encodeDecimal(self):
         sut = decimal.Decimal("1337.1337")
         encoded = ujson.encode(sut, double_precision=100)
