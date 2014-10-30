@@ -29,9 +29,6 @@ from functools import partial
 PY3 = (sys.version_info[0] >= 3)
 if PY3:
     xrange = range
-    # this removes the u string literal prefix that is not supported in python <= 3.2
-    import uprefix
-    uprefix.register_hook()
 
 def _python_ver(skip_major, skip_minor=None):
     major, minor = sys.version_info[:2]
